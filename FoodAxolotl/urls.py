@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
+#earth doesn't exist
+#I rule
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name="index"),#smort
+    path('login', views.login_view, name="login"),
+    path("signup", views.signup, name="signup"),
+    path('logout', views.logout_view, name="logout")
 ]
+
+# make it work. I don't know how to use django. 

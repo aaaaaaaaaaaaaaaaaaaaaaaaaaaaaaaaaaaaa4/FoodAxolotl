@@ -1,0 +1,21 @@
+{% extends "social/layout.html" %}
+
+{% block body %}
+
+    <h2>Register</h2>
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+<div class="container">
+    <form action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
+                <p><input class="form-control"type="text" name="username" placeholder="Username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required id="id_username"></p>
+                <p><input class="form-control"type="password" name="password1" placeholder="Password"autocomplete="new-password" required id="id_password1"> </p>
+                <p><input class="form-control"type="password" placeholder="Password confirmation" name="password2" autocomplete="new-password" required id="id_password2"></p>
+        <input class="btn btn-primary" type="submit" value="Sign up">
+    </form>
+</div>
+    Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+
+{% endblock %}

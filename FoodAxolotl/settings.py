@@ -25,12 +25,13 @@ SECRET_KEY = '-#++^m5m2!778#f_m0!jdy&(p_gra5#aqrm65&$9bhajayq=aj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['foodaxolotl.ch1ck3n.repl.co', '0e1b11fa-04e3-4027-9ae2-f9f39e6eef9f.id.replitusercontent.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'FoodAxolotl',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
